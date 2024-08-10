@@ -1,24 +1,17 @@
-
-
-const list=[5,9,3,1,2,8,4,7,6]
- const sorting=(list)=>{
-    let a=list
-    for (let i=0;i<a.length;i++){
-        for(let j=0;j<a.length+1;j++){
-        if(a[j]>a[j+1]){
-           kari=a[j]
-            c=a[j+1]
-            a[j]=c
-            a[j+1]=kari
-        }
-
+var list = [5, 9, 3, 1, 2, 8, 4, 7, 6];
+var sorting = function (list) {
+    var _a;
+    for (var i = 0; i < list.length; i++) {
+        for (var j = 0; j < list.length + 1; j++) {
+            if (list[j] > list[j + 1]) {
+                _a = [list[j + 1], list[j]], list[j] = _a[0], list[j + 1] = _a[1];
+            }
         }
     }
-    return a
-}
-
-console.log('hello')
-
-module.exports={
-    sorting
-}
+    return list;
+};
+var bubbleSort = function () {
+};
+module.exports = {
+    sorting: sorting
+};
